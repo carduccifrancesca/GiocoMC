@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D boxCollider;
     private float wallJumpCooldown;
     private float horizontalInput;
+    private bool grounded;
 
 
     private void Awake()
@@ -35,15 +36,15 @@ public class PlayerMovement : MonoBehaviour
 
         //parametri animazione
         anim.SetBool("run", horizontalInput != 0);
-        anim.SetBool("grounded", isGrounded());
+        anim.SetBool("grounded", grounded);
 
         if(wallJumpCooldown > 0.2f)
         {
             body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
 
-            if(onWall() && !isGrounded())
+            if(onWall() && !grounded)
             {
-                body.gravityScale = 0;
+                body.gravityScale = 2;
                 body.velocity = Vector2.zero;
             }
             else
@@ -51,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
                 body.gravityScale = 7;
             }
 
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetKey(KeyCode.Space) && grounded)
                 Jump();
         }
         else
@@ -62,12 +63,21 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        if(isGrounded())
+        if(grounded)
         {
-            body.velocity = new Vector2(body.velocity.x, jumpPower);
-            anim.SetTrigger("jump");
+            if(!onWall())
+            {
+                body.velocity = new Vector2(body.velocity.x, jumpPower);
+                anim.SetTrigger("jump");
+                grounded = false;
+            }
+            else
+            {
+                body.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 3, 6);
+            }
+
         }
-        else if (onWall() && !isGrounded())
+        else if (onWall() && !grounded)
         {
             if (horizontalInput == 0)
             {
@@ -83,6 +93,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.tag == "Ground")
+            grounded = true;
     }
 
     private bool isGrounded()
