@@ -7,7 +7,7 @@ TagManager:
   - Ground
   - Wall
   - Train
-  - Enemy
+  - Trap
   layers:
   - Default
   - TransparentFX
@@ -20,7 +20,7 @@ TagManager:
   - Ground
   - Wall
   - Train
-  - Enemy
+  - 
   - 
   - 
   - 
@@ -56,7 +56,4 @@ TagManager:
     locked: 0
   - name: Wall
     uniqueID: 1693319379
-    locked: 0
-  - name: Foregrounde
-    uniqueID: 3644478579
     locked: 0
