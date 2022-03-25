@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndlessPlayer: MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class EndlessPlayer: MonoBehaviour
     public float maxAcceleration;
     public float acceleration = 10;
     public float maxXVelocity;
+    public GameObject RestartBO;
 
 
 
@@ -93,8 +95,10 @@ public class EndlessPlayer: MonoBehaviour
             grounded = true;
         else
         {
-            if (collision.gameObject.tag == "Trap")
+            if (collision.gameObject.tag == "Trap") { 
                 die();
+                RestartBO.SetActive(true);
+              }
         }
         
 
@@ -115,5 +119,11 @@ public class EndlessPlayer: MonoBehaviour
     private void die()
     {
         Time.timeScale = 0;
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene("EndlessMode");
+        Time.timeScale = 1;
     }
 }
