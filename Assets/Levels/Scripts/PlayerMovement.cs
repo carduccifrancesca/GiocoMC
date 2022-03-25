@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
                 body.gravityScale = 7;
             }
 
-            if (Input.GetKey(KeyCode.Space) && grounded)
+            if (Input.GetKey(KeyCode.Space))
                 Jump();
         }
         else
@@ -85,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
                 transform.localScale = new Vector3(-Mathf.Sign(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
             else
-                body.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 3, 6);
+                body.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 3, 10);
 
             wallJumpCooldown = 0;
         }
@@ -93,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Ground")
+        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Train")
             grounded = true;
     }
 
