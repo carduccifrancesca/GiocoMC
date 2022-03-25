@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Wall
   - Train
+  - Trap
   layers:
   - Default
   - TransparentFX
