@@ -18,6 +18,7 @@ public class EndlessPlayer: MonoBehaviour
     public float acceleration = 10;
     public float maxXVelocity;
     public GameObject RestartBO;
+    public GameObject MenuBO;
 
 
 
@@ -98,7 +99,8 @@ public class EndlessPlayer: MonoBehaviour
             if (collision.gameObject.tag == "Trap") { 
                 die();
                 RestartBO.SetActive(true);
-              }
+                MenuBO.SetActive(true);
+            }
         }
         
 
@@ -124,6 +126,12 @@ public class EndlessPlayer: MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene("EndlessMode");
+        Time.timeScale = 1;
+    }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("ModeMenu");
         Time.timeScale = 1;
     }
 }
