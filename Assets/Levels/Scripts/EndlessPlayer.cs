@@ -91,6 +91,13 @@ public class EndlessPlayer: MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Train")
             grounded = true;
+        else
+        {
+            if (collision.gameObject.tag == "Trap")
+                die();
+        }
+        
+
     }
 
     private bool isGrounded()
@@ -103,5 +110,10 @@ public class EndlessPlayer: MonoBehaviour
     {
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(transform.localScale.x, 0), 0.1f, wallLayer);
         return raycastHit.collider != null;
+    }
+
+    private void die()
+    {
+        Time.timeScale = 0;
     }
 }
