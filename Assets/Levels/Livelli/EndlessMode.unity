@@ -860,6 +860,7 @@ GameObject:
   - component: {fileID: 1416021512}
   - component: {fileID: 1416021511}
   - component: {fileID: 1416021510}
+  - component: {fileID: 1416021513}
   m_Layer: 11
   m_Name: Enemy
   m_TagString: Enemy
@@ -946,11 +947,26 @@ Transform:
   m_GameObject: {fileID: 1416021509}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.088754386, y: -0.02823353, z: 0.0005206086}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1416021513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416021509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2953896851cd8844ebe171b336117c92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  leftLimit: 20
+  rightLimit: 200
 --- !u!1 &1633635703
 GameObject:
   m_ObjectHideFlags: 0
