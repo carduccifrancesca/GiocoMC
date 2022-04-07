@@ -17,13 +17,15 @@ public class EndlessPlayer: MonoBehaviour
     public float maxAcceleration;
     public float acceleration = 10;
     public float maxXVelocity;
-    public GameObject RestartBO;
+    public GameObject RestartBO; 
     public GameObject MenuBO;
 
 
 
     private void Awake()
     {
+        RestartBO.SetActive(false);
+        MenuBO.SetActive(false);
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
