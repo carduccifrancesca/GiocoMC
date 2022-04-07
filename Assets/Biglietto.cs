@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Stone : MonoBehaviour
+public class Biglietto : MonoBehaviour
 {
     public float speed;
     public float limite;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +17,7 @@ public class Stone : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.left * Time.deltaTime * speed);
-        if(transform.position.x < limite)
+        if (transform.position.x < limite)
         {
             Destroy(gameObject);
         }

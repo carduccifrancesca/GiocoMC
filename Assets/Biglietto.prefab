@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7739111854976428781}
   - component: {fileID: 7739111854976428782}
   - component: {fileID: 7739111854976428779}
-  - component: {fileID: 7739111854976428780}
+  - component: {fileID: 5486744449087722283}
   m_Layer: 0
   m_Name: Biglietto
   m_TagString: Biglietto
@@ -110,7 +110,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 1.89}
   m_EdgeRadius: 0
---- !u!114 &7739111854976428780
+--- !u!114 &5486744449087722283
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,9 +119,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 7739111854976428783}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2953896851cd8844ebe171b336117c92, type: 3}
+  m_Script: {fileID: 11500000, guid: ee27eb4d1a4c22b40adbb626b5fb30c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -10
-  leftLimit: 30
-  rightLimit: 80
+  speed: 5
+  limite: -10
