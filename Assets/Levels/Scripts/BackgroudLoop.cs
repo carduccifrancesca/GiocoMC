@@ -17,6 +17,7 @@ public class BackgroudLoop : MonoBehaviour
     void Update()
     {
         transform.position += new Vector3(speed * Time.deltaTime, 0);
+        
 
         if(transform.position.x < -leftLimit)
         {
