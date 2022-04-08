@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1730768806204232412}
   - component: {fileID: 1730768806204232402}
   - component: {fileID: 1730768806204232401}
-  - component: {fileID: 1730768806204232400}
+  - component: {fileID: 8547450564696370779}
   m_Layer: 11
   m_Name: Enemy
   m_TagString: Enemy
@@ -130,7 +130,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.89884865, y: 0.5137203}
   m_EdgeRadius: 0
---- !u!114 &1730768806204232400
+--- !u!114 &8547450564696370779
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,9 +139,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1730768806204232413}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2953896851cd8844ebe171b336117c92, type: 3}
+  m_Script: {fileID: 11500000, guid: 641ec606df7a1144492fca4840a18fcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -2
-  leftLimit: 30
-  rightLimit: 200
+  speed: -10
+  limite: 5

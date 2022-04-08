@@ -6,6 +6,7 @@ public class SpawnerManager : MonoBehaviour
 {
     public GameObject stone;
     public GameObject coin;
+    public GameObject enemy;
     public float intervallo;
 
 
@@ -24,5 +25,6 @@ public class SpawnerManager : MonoBehaviour
     {
         Instantiate(stone, transform.position, transform.rotation);
         Instantiate(coin, transform.position + new Vector3(Random.Range(-2,10), Random.Range(-2, 2), 0), transform.rotation);
+        Instantiate(coin, transform.position + new Vector3(Random.Range(-2, 10), Random.Range(-2, 2), 0), transform.rotation);
     }
 }
