@@ -437,7 +437,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b18ed8b773fd84ba1087f90207064b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 1395172734983517084, guid: ac36a531067f5e94489c2d7171a34c9d, type: 3}
+  stone: {fileID: 1395172734983517084, guid: ac36a531067f5e94489c2d7171a34c9d, type: 3}
+  coin: {fileID: 7739111854976428783, guid: dba27da15c8b68b4681fc9fa2e192561, type: 3}
   intervallo: 1
 --- !u!4 &591708794
 Transform:
@@ -447,7 +448,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 591708792}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.077484, y: -0.811895, z: -0.58699846}
+  m_LocalPosition: {x: 12.03, y: -2.93, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
