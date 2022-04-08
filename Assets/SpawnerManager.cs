@@ -25,6 +25,6 @@ public class SpawnerManager : MonoBehaviour
     {
         Instantiate(stone, transform.position, transform.rotation);
         Instantiate(coin, transform.position + new Vector3(Random.Range(-2,10), Random.Range(-2, 2), 0), transform.rotation);
-        Instantiate(enemy, transform.position + new Vector3(Random.Range(-2, 10), Random.Range(-2, 2), 0), transform.rotation);
+        Instantiate(enemy, transform.position + new Vector3(Random.Range(-2, 10), Random.Range(2, 4), 0), transform.rotation);
     }
 }
