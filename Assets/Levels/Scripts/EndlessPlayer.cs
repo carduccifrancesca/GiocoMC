@@ -34,8 +34,6 @@ public class EndlessPlayer: MonoBehaviour
     private void Update()
     {
 
-      
-
         //parametri animazione
         anim.SetBool("run", grounded);
  

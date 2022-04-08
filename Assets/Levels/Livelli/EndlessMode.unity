@@ -399,7 +399,7 @@ Animator:
   m_GameObject: {fileID: 474133316}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 577ef72218c7dd94183e456127b35d11, type: 2}
+  m_Controller: {fileID: 9100000, guid: b275fa88369694946b5ca16698a78c9e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -437,7 +437,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b18ed8b773fd84ba1087f90207064b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 1395172734983517084, guid: ac36a531067f5e94489c2d7171a34c9d, type: 3}
+  stone: {fileID: 0}
+  coin: {fileID: 0}
   intervallo: 1
 --- !u!4 &591708794
 Transform:
