@@ -23,6 +23,6 @@ public class SpawnerManager : MonoBehaviour
     public void spawn()
     {
         Instantiate(stone, transform.position, transform.rotation);
-        Instantiate(coin, transform.position + new Vector3(Random.Range(-2,2), 0, 0), transform.rotation);
+        Instantiate(coin, transform.position + new Vector3(Random.Range(-2,10), Random.Range(-2, 2), 0), transform.rotation);
     }
 }
