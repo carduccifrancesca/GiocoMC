@@ -8,6 +8,8 @@ TagManager:
   - Wall
   - Train
   - Trap
+  - Biglietto
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -20,7 +22,7 @@ TagManager:
   - Ground
   - Wall
   - Train
-  - 
+  - Enemy
   - 
   - 
   - 

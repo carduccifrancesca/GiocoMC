@@ -287,7 +287,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.12991628, y: -0.54342127}
+  m_Offset: {x: 0.09912151, y: -0.5511199}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -298,7 +298,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.91098326, y: 1.3426304}
+  m_Size: {x: 0.8493937, y: 1.1424644}
   m_EdgeRadius: 0
 --- !u!212 &474133319
 SpriteRenderer:
@@ -439,6 +439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stone: {fileID: 1395172734983517084, guid: ac36a531067f5e94489c2d7171a34c9d, type: 3}
   coin: {fileID: 7739111854976428783, guid: dba27da15c8b68b4681fc9fa2e192561, type: 3}
+  enemy: {fileID: 1730768806204232413, guid: 723b3d06a6dedd946bff4dc52e8f09d3, type: 3}
   intervallo: 1
 --- !u!4 &591708794
 Transform:
@@ -749,7 +750,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &961733974
 RectTransform:
   m_ObjectHideFlags: 0
@@ -982,7 +983,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1580424900
 RectTransform:
   m_ObjectHideFlags: 0
