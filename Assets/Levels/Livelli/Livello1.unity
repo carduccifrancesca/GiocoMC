@@ -1277,9 +1277,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
-  player: {fileID: 0}
+  player: {fileID: 1440904745}
   aheadDistance: 4
   cameraSpeed: 1
+--- !u!4 &1440904745 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1482308793654859013, guid: 5dacc96aa00d5d045ba51738892a2a4e, type: 3}
+  m_PrefabInstance: {fileID: 1482308793702338828}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1635459535
 GameObject:
   m_ObjectHideFlags: 0
