@@ -25,13 +25,19 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal");
-        
 
+        float localScaleX = transform.localScale.x;
         //cambia la posizione tra destra e sinistra
         if (horizontalInput > 0.01f)
-            transform.localScale = Vector3.one;
+        {
+            if (localScaleX < 0)
+                transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        }
         else if (horizontalInput < -0.01f)
-            transform.localScale = new Vector3(-1, 1, 1);
+        {
+            if (localScaleX > 0)
+                transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        }
 
 
         //parametri animazione
