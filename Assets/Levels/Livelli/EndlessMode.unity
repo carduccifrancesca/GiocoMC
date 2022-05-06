@@ -673,7 +673,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 360241393}
         m_TargetAssemblyTypeName: EndlessPlayer, Assembly-CSharp
         m_MethodName: Restart
         m_Mode: 1
@@ -906,7 +906,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 360241393}
         m_TargetAssemblyTypeName: EndlessPlayer, Assembly-CSharp
         m_MethodName: BackToMenu
         m_Mode: 1
