@@ -74,8 +74,8 @@ public class PlayerMovement : MonoBehaviour
             if(!onWall())
             {
                 body.velocity = new Vector2(body.velocity.x, jumpPower);
-                anim.SetTrigger("jump");
                 grounded = false;
+                anim.SetBool("grounded", grounded);
             }
             else
             {
@@ -101,6 +101,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Train")
             grounded = true;
+
+        if (collision.gameObject.tag == "Buca")
+            body.transform.localPosition = new Vector3(body.transform.localPosition.x, body.transform.localPosition.y - 9, body.transform.localPosition.z);
     }
 
     private bool isGrounded()
