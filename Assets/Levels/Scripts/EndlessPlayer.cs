@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class EndlessPlayer: MonoBehaviour
 {
     [SerializeField] private float jumpPower;
@@ -101,7 +102,16 @@ public class EndlessPlayer: MonoBehaviour
                 RestartBO.SetActive(true);
                 MenuBO.SetActive(true);
             }
+            else
+            {
+                if (collision.gameObject.tag == "Biglietto")
+                {
+                    Destroy(collision.gameObject);
+                    GameObject.Find("Punteggi").GetComponent<ScoreManager>().aggiornaBiglietti();
+                }
+            }
         }
+        
         
 
     }
