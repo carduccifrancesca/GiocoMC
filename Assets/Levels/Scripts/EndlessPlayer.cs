@@ -56,7 +56,6 @@ public class EndlessPlayer: MonoBehaviour
 
             if (Input.GetKey(KeyCode.Space))
             {
-                suonoSalto.Play();
                 Jump(); 
             }
                 
@@ -69,6 +68,7 @@ public class EndlessPlayer: MonoBehaviour
 
     private void Jump()
     {
+        suonoSalto.Play();
         if (grounded)
         {
             if (!onWall())
