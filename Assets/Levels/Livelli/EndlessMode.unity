@@ -986,6 +986,7 @@ GameObject:
   - component: {fileID: 1376237209}
   - component: {fileID: 1376237208}
   - component: {fileID: 1376237211}
+  - component: {fileID: 1376237212}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: Player
@@ -1076,10 +1077,12 @@ MonoBehaviour:
   cameraSpeed: 1.5
 --- !u!1 &1394258574
 GameObject:
+
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1394258576}

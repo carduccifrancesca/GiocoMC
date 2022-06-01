@@ -25,13 +25,19 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal");
-        
 
+        float localScaleX = transform.localScale.x;
         //cambia la posizione tra destra e sinistra
         if (horizontalInput > 0.01f)
-            transform.localScale = Vector3.one;
+        {
+            if (localScaleX < 0)
+                transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        }
         else if (horizontalInput < -0.01f)
-            transform.localScale = new Vector3(-1, 1, 1);
+        {
+            if (localScaleX > 0)
+                transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        }
 
 
         //parametri animazione
@@ -68,8 +74,8 @@ public class PlayerMovement : MonoBehaviour
             if(!onWall())
             {
                 body.velocity = new Vector2(body.velocity.x, jumpPower);
-                anim.SetTrigger("jump");
                 grounded = false;
+                anim.SetBool("grounded", grounded);
             }
             else
             {
@@ -95,6 +101,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Train")
             grounded = true;
+
+        if (collision.gameObject.tag == "Buca")
+            body.transform.localPosition = new Vector3(body.transform.localPosition.x, body.transform.localPosition.y - 9, body.transform.localPosition.z);
     }
 
     private bool isGrounded()
