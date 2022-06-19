@@ -8,8 +8,6 @@ public class EndlessPlayer: MonoBehaviour
     [SerializeField] private float jumpPower;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask wallLayer;
-    [SerializeField] private AudioSource suonoSalto;
-
     private Rigidbody2D body;
     private Animator anim;
     private BoxCollider2D boxCollider;
@@ -55,10 +53,7 @@ public class EndlessPlayer: MonoBehaviour
             }
 
             if (Input.GetKey(KeyCode.Space))
-            {
-                Jump(); 
-            }
-                
+                Jump();
         }
         else
         {
@@ -68,7 +63,6 @@ public class EndlessPlayer: MonoBehaviour
 
     private void Jump()
     {
-        suonoSalto.Play();
         if (grounded)
         {
             if (!onWall())
