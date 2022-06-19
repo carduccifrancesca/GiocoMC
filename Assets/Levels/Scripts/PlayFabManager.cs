@@ -87,7 +87,7 @@ public class PlayFabManager : MonoBehaviour
 
     void OnError(PlayFabError error)
     {
-
+        messageText.text = "Error";
         Debug.Log("Error while logging in/creating account!");
         Debug.Log(error.GenerateErrorReport());
     }

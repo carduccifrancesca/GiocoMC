@@ -52,7 +52,7 @@ public class EndlessPlayer: MonoBehaviour
                 body.gravityScale = 7;
             }
 
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetKey(KeyCode.Space) || Input.touchCount>0)
                 Jump();
         }
         else

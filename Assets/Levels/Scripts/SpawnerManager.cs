@@ -23,13 +23,13 @@ public class SpawnerManager : MonoBehaviour
     }
     public void spawn()
     {
-        Instantiate(coin, transform.position + new Vector3(Random.Range(-2,10), Random.Range(-2, 2), 0), transform.rotation);
+        Instantiate(coin, transform.position + new Vector3(Random.Range(5,10), Random.Range(-2, 2), 0), transform.rotation);
 
 
         int dice = Random.Range(1, 3);
         if(dice %2 == 1)    
-        Instantiate(enemy, transform.position + new Vector3(Random.Range(-2, 10), Random.Range(2, 4), 0), transform.rotation);
+        Instantiate(enemy, transform.position + new Vector3(Random.Range(9, 10), Random.Range(3, 4), 0), transform.rotation);
         else
-        Instantiate(stone, transform.position, transform.rotation);
+        Instantiate(stone, transform.position + new Vector3(Random.Range(9, 10), 0, 0), transform.rotation);
     }
 }
