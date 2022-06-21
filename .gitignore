@@ -36,3 +36,5 @@ sysinfo.txt
 *.unitypackage
 *.log
 UserSettings/EditorUserSettings.asset
+ProjectSettings/ProjectVersion.txt
+Assets/StreamingAssets/2DAnimationSampleAssetBundles/2DAnimationSampleAssetBundles.manifest
