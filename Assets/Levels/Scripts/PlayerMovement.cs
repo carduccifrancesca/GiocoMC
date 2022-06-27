@@ -22,6 +22,14 @@ public class PlayerMovement : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
     }
 
+    private void FixedUpdate()
+    { 
+        //parametri animazione
+        anim.SetBool("run", horizontalInput != 0);
+        anim.SetBool("grounded", grounded);
+
+    }
+
     private void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal");
@@ -38,11 +46,6 @@ public class PlayerMovement : MonoBehaviour
             if (localScaleX > 0)
                 transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
         }
-
-
-        //parametri animazione
-        anim.SetBool("run", horizontalInput != 0);
-        anim.SetBool("grounded", grounded);
 
         if(wallJumpCooldown > 0.2f)
         {
