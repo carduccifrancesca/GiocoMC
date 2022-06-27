@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal");
 
